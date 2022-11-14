@@ -8,9 +8,9 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.validation.constraints.NotNull;
 
-import lombok.Data;
+//import lombok.Data;
 
-@Data
+//@Data
 @MappedSuperclass
 public abstract class CustomerAbstract {
 	public static final int FIRST_NAME_MAX_LENGTH = 150;
@@ -35,5 +35,43 @@ public abstract class CustomerAbstract {
 	protected String email;
 	@Column(name="address", length=ADDRESS_MAX_LENGTH)
 	protected String address;
+	public Long getCustomerId() {
+		return customerId;
+	}
+	public void setCustomerId(Long customerId) {
+		this.customerId = customerId;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public String getAvatar() {
+		return avatar;
+	}
+	public void setAvatar(String avatar) {
+		this.avatar = avatar;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
 
+	
+	
 }

@@ -3,10 +3,10 @@ package com.toystore.entity;
 import java.util.Calendar;
 
 import javax.persistence.*;
-import lombok.Data;
+//import lombok.Data;
 
 @Entity
-@Data
+//@Data
 @Table(name="shopping_order")
 public class Order {
 	@Id
@@ -21,4 +21,30 @@ public class Order {
 	@ManyToOne
 	@JoinColumn(name="customer_id")
 	private Customer customerId;
+
+	public Long getOrderId() {
+		return orderId;
+	}
+
+	public void setOrderId(Long orderId) {
+		this.orderId = orderId;
+	}
+
+	public Calendar getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(Calendar createdAt) {
+		this.createdAt = createdAt;
+	}
+
+	public Customer getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(Customer customerId) {
+		this.customerId = customerId;
+	}
+	
+	
 }

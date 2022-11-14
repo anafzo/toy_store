@@ -6,7 +6,7 @@ import com.toystore.entity.abstract_class.*;
 import lombok.*;
 
 @Entity
-@Data
+//@Data
 @EqualsAndHashCode(callSuper=false)
 @Table(name="customer")
 public class Customer extends CustomerAbstract {
@@ -16,5 +16,19 @@ public class Customer extends CustomerAbstract {
 	private String password;
 	@Column(name="is_active")
 	protected Boolean isActive;
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public Boolean getIsActive() {
+		return isActive;
+	}
+	public void setIsActive(Boolean isActive) {
+		this.isActive = isActive;
+	}
+	
+	
 	
 }
